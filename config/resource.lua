@@ -1,0 +1,2 @@
+--set resource of project
+--include redis/mysql/mongodb and other apps.

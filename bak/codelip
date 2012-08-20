@@ -1,0 +1,42 @@
+code lip
+
+
+
+# nginx.conf
+   keepalive_timeout 0;
+
+   server {
+       location /api {
+           content_by_lua '
+                local query = generate_query_from_request()
+                output_response()
+                ngx.eof()
+                do_db_query(query)
+           ';
+       }
+   }
+
+   
+   
+   
+   
+    location /t {
+       content_by_lua '
+           ngx.say("done")
+           ngx.eof()
+           ngx.log(ngx.NOTICE, "XXX test begin")
+
+           local redis = require "resty.redis"
+           local red = redis:new()
+           local ok, err = red:connect("127.0.0.1", 6379)
+           if not ok then
+               ngx.say("failed to connect: ", err)
+           end
+           local res, err = red:blpop("key-not-exist", 3)
+           if not res then
+               ngx.log(ngx.ERR, "failed to blpop: ", err)
+               return
+           end
+           ngx.log(ngx.NOTICE, "XXX blpop result: ", res)
+       ';
+   }
