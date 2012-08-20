@@ -43,11 +43,17 @@ please read ./document/yagami_user_guide
 How to use
 ======
 cd /usr/local/nginx/conf/
+
 git clone https://github.com/xinqiyang/yagami.git
+
 cd yagami
+
 vim yagami.conf  ##change this config file to use you own config settings.
-cd conf  
+
+cd conf
+
 vim resource.lua   ##set you backend setting here,example  redis/mysql/mongodb/memcache and so on.
+
 /usr/local/nginx/sbin/nginx -s reload
 
 License
