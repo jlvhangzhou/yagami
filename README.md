@@ -30,12 +30,27 @@ private message
 
 and you own business api here....come on!
 
-Documentation && Install
+Roadmap
+======
+It's a backend api server
+
+
+
+Documentation 
 ======
 please read ./document/yagami_user_guide
 
+How to use
+======
+cd /usr/local/nginx/conf/
+git clone https://github.com/xinqiyang/yagami.git
+cd yagami
+vim yagami.conf  ##change this config file to use you own config settings.
+cd conf  
+vim resource.lua   ##set you backend setting here,example  redis/mysql/mongodb/memcache and so on.
+/usr/local/nginx/sbin/nginx -s reload
 
-Thank you,We wish to you reply.
-
-
+License
+======
+This software is distributed under Apache License Version 2.0, see file LICENSE or http://www.apache.org/licenses/LICENSE-2.0
 
