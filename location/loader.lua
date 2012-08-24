@@ -87,7 +87,7 @@ function loader()
         ngx.say('Can not setup init')
         ngx.exit(501)
     end
-    #get uri 
+    --get uri 
     local uri=ngx.var.REQUEST_URI
     local app_env_key='MOOCHINE_APP_' .. mch_vars.get('MOOCHINE_APP')
     local route_map=mch_vars.get(app_env_key)['route_map']
