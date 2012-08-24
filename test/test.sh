@@ -1,6 +1,12 @@
 #!/bin/sh
 
-##script of test 
+
+##remove access_log
+rm -rf ../log/access_log.log
+
+##define api list and set api result
+
+
 
 
 
