@@ -7,6 +7,8 @@ install yagami,please git clone the project from github,then mv the document to 
 for example:
 cd /usr/local/nginx/conf/
 git clone https://github.com/xinqiyang/yagami.git
+vim nginx.conf 
+#move the the end of config,then add a line,"include yagami/yagami.conf;"
 cd yagami
 vim yagami.conf  ##change this config file to use you own config settings.
 cd conf  
