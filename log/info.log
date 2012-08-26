@@ -1,0 +1,136 @@
+2012/08/24 13:47:36 [notice] 2712#0: using the "epoll" event method
+2012/08/24 13:47:36 [notice] 2712#0: start worker processes
+2012/08/24 13:47:36 [notice] 2712#0: start worker process 3145
+2012/08/24 13:47:36 [notice] 2712#0: signal 17 (SIGCHLD) received
+2012/08/24 13:47:36 [notice] 2712#0: worker process 2713 exited with code 0
+2012/08/24 13:47:36 [notice] 2712#0: signal 29 (SIGIO) received
+2012/08/24 13:54:51 [notice] 2712#0: signal 1 (SIGHUP) received, reconfiguring
+2012/08/24 13:54:51 [notice] 2712#0: reconfiguring
+2012/08/24 13:54:51 [notice] 2712#0: using the "epoll" event method
+2012/08/24 13:54:51 [notice] 2712#0: start worker processes
+2012/08/24 13:54:51 [notice] 2712#0: start worker process 3153
+2012/08/24 13:54:51 [notice] 3145#0: gracefully shutting down
+2012/08/24 13:54:51 [notice] 3145#0: exiting
+2012/08/24 13:54:51 [notice] 3145#0: exit
+2012/08/24 13:54:51 [notice] 2712#0: signal 17 (SIGCHLD) received
+2012/08/24 13:54:51 [notice] 2712#0: worker process 3145 exited with code 0
+2012/08/24 13:54:51 [notice] 2712#0: signal 29 (SIGIO) received
+2012/08/24 13:54:58 [error] 3153#0: *10 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:23: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET / HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:57:24 [notice] 2712#0: signal 1 (SIGHUP) received, reconfiguring
+2012/08/24 13:57:24 [notice] 2712#0: reconfiguring
+2012/08/24 13:57:24 [notice] 2712#0: using the "epoll" event method
+2012/08/24 13:57:24 [notice] 2712#0: start worker processes
+2012/08/24 13:57:24 [notice] 2712#0: start worker process 3160
+2012/08/24 13:57:24 [notice] 3153#0: gracefully shutting down
+2012/08/24 13:57:24 [notice] 3153#0: exiting
+2012/08/24 13:57:24 [notice] 3153#0: exit
+2012/08/24 13:57:24 [notice] 2712#0: signal 17 (SIGCHLD) received
+2012/08/24 13:57:24 [notice] 2712#0: worker process 3153 exited with code 0
+2012/08/24 13:57:24 [notice] 2712#0: signal 29 (SIGIO) received
+2012/08/24 13:57:25 [error] 3160#0: *11 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET / HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:57:27 [error] 3160#0: *12 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET / HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:57:28 [error] 3160#0: *13 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET / HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:07 [error] 3160#0: *14 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:14 [error] 3160#0: *15 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:30 [error] 3160#0: *16 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:47 [error] 3160#0: *17 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3&new=332 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:48 [error] 3160#0: *18 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3&new=332 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:53 [error] 3160#0: *19 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3&new=332&bbb=333 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:55 [error] 3160#0: *20 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3&new=332&bbb=333 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:56 [error] 3160#0: *21 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3&new=332&bbb=333 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:57 [error] 3160#0: *22 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3&new=332&bbb=333 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 13:58:58 [error] 3160#0: *23 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET /people/get?id=3&new=332&bbb=333 HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/24 14:38:08 [info] 3160#0: *24 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/24 14:40:33 [info] 3160#0: *25 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/24 14:45:21 [info] 3160#0: *26 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/24 14:45:39 [info] 3160#0: *27 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/24 14:47:50 [info] 3160#0: *28 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/25 21:29:28 [info] 3160#0: *32 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/25 21:30:13 [info] 3160#0: *33 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/26 16:54:32 [info] 3160#0: *34 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/26 18:40:30 [info] 3160#0: *35 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/26 18:41:02 [error] 3160#0: *36 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: api.dev.yagami.org, request: "GET / HTTP/1.1", host: "api.dev.yagami.org"
+2012/08/26 18:47:15 [info] 3160#0: *37 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/26 18:47:19 [info] 3160#0: *38 client prematurely closed connection while reading client request line, client: 192.168.11.1, server: localhost
+2012/08/26 18:49:47 [info] 3160#0: *39 client 127.0.0.1 closed keepalive connection
+2012/08/26 18:50:09 [notice] 2712#0: signal 1 (SIGHUP) received, reconfiguring
+2012/08/26 18:50:09 [notice] 2712#0: reconfiguring
+2012/08/26 18:50:09 [notice] 2712#0: using the "epoll" event method
+2012/08/26 18:50:09 [notice] 2712#0: start worker processes
+2012/08/26 18:50:09 [notice] 2712#0: start worker process 6822
+2012/08/26 18:50:09 [notice] 3160#0: gracefully shutting down
+2012/08/26 18:50:09 [notice] 3160#0: exiting
+2012/08/26 18:50:09 [notice] 3160#0: exit
+2012/08/26 18:50:09 [notice] 2712#0: signal 17 (SIGCHLD) received
+2012/08/26 18:50:09 [notice] 2712#0: worker process 3160 exited with code 0
+2012/08/26 18:50:09 [notice] 2712#0: signal 29 (SIGIO) received
+2012/08/26 18:50:12 [error] 6822#0: *40 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: yagami.woshimaijia.com, request: "GET / HTTP/1.1", host: "yagami.woshimaijia.com"
+2012/08/26 18:50:14 [error] 6822#0: *41 lua handler aborted: runtime error: [string "ngx.exit"]:1: attempt to set status 500 via ngx.exit after sending out the response status 200
+stack traceback:
+	[C]: in function '_exit'
+	[string "ngx.exit"]:1: in function 'exit'
+	/usr/local/nginx/conf/yagami/location/loader.lua:25: in function </usr/local/nginx/conf/yagami/location/loader.lua:2>, client: 127.0.0.1, server: yagami.woshimaijia.com, request: "GET / HTTP/1.1", host: "yagami.woshimaijia.com"

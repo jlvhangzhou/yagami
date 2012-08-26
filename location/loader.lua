@@ -20,7 +20,9 @@
 
 --framwork entry  load the class to do some thing
 ngx.say("hello yagami,I am loader");
-
+--send response to browser
+ngx.eof()
+ngx.exit(500)
 --params get
 
 --run mvc get the request then get controller to deal the request
