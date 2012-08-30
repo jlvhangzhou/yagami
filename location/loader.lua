@@ -19,98 +19,52 @@
 --
 
 --framwork entry  load the class to do some thing
-ngx.say("hello yagami,I am loader");
+--ngx.say("hello yagami,I am loader");
 --send response to browser
-ngx.eof()
-ngx.exit(500)
+--ngx.eof()
+--ngx.exit(500)
 --params get
 
---run mvc get the request then get controller to deal the request
---local dispatcher = require yagami/library/?/dispatcher.lua
-
---LUA_PATH
---print(LUA_PATH)
-
---get uri and params  and check params
-
-
---do location and do logic
-
-
-
-
-mch_vars=nil
-
--- init,set metatable for lua files.
-function is_inited(init)
-    local r_G=_G
-    local mt=getmetatable(_G)
-    if mt then
-        r_G=rawget(mt,"__index")
-    end
-    if init == nil then
-        return r_G['moochine_inited']
-    else
-        r_G['moochine_inited']=init
-    end
-end
-
---
---
-function setup_app()
-    local app_path = ngx.var.MOOCHINE_APP
-    local mch_home = ngx.var.MOOCHINE_HOME
-    local app_extra= ngx.var.MOOCHINE_APP_EXTRA
-    package.path = mch_home .. '/luasrc/?.lua;' .. package.path
-    mch_vars=require("mch.vars")
-    local mchutil=require("mch.util")
-    mchutil.setup_app_env(mch_home,app_path,mch_vars.vars())
-    require("routing")
-    if app_extra then
-        mch_vars.set('MOOCHINE_EXTRA_APP_PATH',app_extra)
-        package.path = app_extra .. '/app/?.lua;' .. package.path
-        require("extra_routing")
-    end
-
-    is_inited(true)
-    
-end
-
--- loader set global setting
---
 function loader()
-    if not is_inited() then
-        setup_app()
-    else
-        yagami_vars=require("mch.vars")
-    end
-    
-    if not is_inited() then
-        ngx.say('Can not setup init')
-        ngx.exit(501)
-    end
-    --get uri 
-    local uri=ngx.var.REQUEST_URI
-    local app_env_key='MOOCHINE_APP_' .. mch_vars.get('MOOCHINE_APP')
-    local route_map=mch_vars.get(app_env_key)['route_map']
-    for k,v in pairs(route_map) do
-        local args=string.match(uri, k)
-        if args then
-            local request=mch_vars.get('MOOCHINE_MODULES')['request']
-            local response=mch_vars.get('MOOCHINE_MODULES')['response']
-            if type(v)=="function" then
-                local response=response.Response:new()
-                v(request.Request:new(),response,args)
-                ngx.print(response._output)
-            elseif type(v)=="table" then
-                v:_handler(request.Request:new(),response.Response:new(),args)
-            else
-                ngx.exit(500)
-            end
-            break
-        end
-    end
+	--run mvc get the request then get controller to deal the request
+	--local dispatcher = require yagami/library/?/dispatcher.lua
+
+	local ret={
+        method=ngx.var.request_method,
+        schema=ngx.var.schema,
+        host=ngx.var.host,
+        hostname=ngx.var.hostname,
+        uri=ngx.var.request_uri,
+        path=ngx.var.uri,
+        filename=ngx.var.request_filename,
+        query_string=ngx.var.query_string,
+        headers=ngx.req.get_headers(),
+        user_agent=ngx.var.http_user_agent,
+        remote_addr=ngx.var.remote_addr,
+        remote_port=ngx.var.remote_port,
+        remote_user=ngx.var.remote_user,
+        remote_passwd=ngx.var.remote_passwd,
+        content_type=ngx.var.content_type,
+        content_length=ngx.var.content_length,
+        uri_args=ngx.req.get_uri_args(),
+        socket=ngx.req.socket
+    }
+ 	
+ 	package.path = ngx.var.yagami_home .. '/library/?.lua;' ..ngx.var.yagami_home .. '/location/?.lua;' .. package.path
+ 	--ngx.say(package.path)
+	
+	local path = ngx.var.uri
+	local len = string.len(path)
+	local location = string.sub(path,2,len)
+	require(location)
+	
 end
 
 --run loader init 
 loader()
+
+
+
+
+
+
